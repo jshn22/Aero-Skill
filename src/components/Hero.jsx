@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { BookOpen, ArrowRight } from "lucide-react";
-import VikasMentor from "../assets/VikasMentor.jpeg";
-import LavShashankTeam from "../assets/LavShashankTeam.jpeg";
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -48,10 +45,6 @@ const TypeText = ({ text, className }) => (
 );
 
 const Hero = () => {
-  const mentors = [
-    { name: "Vikas", image: VikasMentor },
-    { name: "Lav Shashank", image: LavShashankTeam },
-  ];
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-[#050505] px-6 py-20 transition-colors duration-500">
@@ -117,30 +110,75 @@ const Hero = () => {
           </Link>
         </motion.div>
 
-        {/* Mentor social proof */}
+        {/* 80/20 Approach Section */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col items-center gap-4 mt-6 pt-8 border-t border-slate-100 dark:border-white/5 w-full max-w-md"
+          className="flex flex-col items-center mt-8 pt-8 border-t border-slate-200 dark:border-white/5 w-full max-w-md"
         >
-          <div className="flex -space-x-3">
-            {mentors.map((m) => (
-              <img
-                key={m.name}
-                src={m.image}
-                alt={m.name}
-                className="w-10 h-10 rounded-full border-4 border-white dark:border-[#050505] object-cover bg-slate-200"
-              />
-            ))}
-            <div className="h-10 px-4 rounded-full border-4 border-white dark:border-[#050505] bg-slate-100 dark:bg-white/5 flex items-center justify-center text-[10px] font-black uppercase tracking-tighter text-[#171710] dark:text-white">
-              +50 Mentors
+          <div className="flex items-center gap-8 md:gap-16 text-center">
+            {/* 80% Practical */}
+            <div className="flex flex-col items-center">
+              <motion.div
+                initial={{ y: -40, opacity: 0, rotateX: -90 }}
+                whileInView={{ y: 0, opacity: 1, rotateX: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 15,
+                  delay: 0.8
+                }}
+                className="text-4xl md:text-5xl font-black text-[#6DACE7] drop-shadow-md"
+              >
+                80%
+              </motion.div>
+              <motion.div
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 1 }}
+                className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#171710] dark:text-white mt-2"
+              >
+                Practical
+              </motion.div>
+            </div>
+
+            {/* Divider */}
+            <motion.div 
+              initial={{ scaleY: 0, opacity: 0 }}
+              whileInView={{ scaleY: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 1.1 }}
+              className="w-px h-12 bg-slate-300 dark:bg-white/10"
+            />
+
+            {/* 20% Theory */}
+            <div className="flex flex-col items-center">
+              <motion.div
+                initial={{ y: -40, opacity: 0, rotateX: -90 }}
+                whileInView={{ y: 0, opacity: 1, rotateX: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 15,
+                  delay: 0.95
+                }}
+                className="text-4xl md:text-5xl font-black text-slate-400 dark:text-slate-600"
+              >
+                20%
+              </motion.div>
+              <motion.div
+                initial={{ x: 20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 1.15 }}
+                className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-slate-500 mt-2"
+              >
+                Theory
+              </motion.div>
             </div>
           </div>
-          <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">
-            Guided by{" "}
-            <span className="text-[#171710] dark:text-white underline decoration-[#6DACE7] underline-offset-4">
-              vetted industry professionals
-            </span>
-          </p>
         </motion.div>
       </motion.div>
     </section>

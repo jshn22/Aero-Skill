@@ -16,12 +16,6 @@ const stats = [
     label: "Communities Impacted",
     desc: "And growing steadily.",
   },
-  {
-    type: "text",
-    display: "Ongoing",
-    label: "Govt. School Programs",
-    desc: "Active in Raipur, Chhattisgarh.",
-  },
 ];
 
 function useCountUp(target, suffix, duration, active) {
@@ -142,7 +136,7 @@ const ImpactStats = () => {
         </div>
 
         {/* Stats row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 md:divide-x md:divide-white/10 dark:md:divide-black/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 md:divide-x md:divide-white/10 dark:md:divide-black/10">
           {stats.map((stat, i) =>
             stat.type === "count" ? (
               <CountStat key={stat.label} stat={stat} index={i} active={inView} />
