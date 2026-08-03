@@ -35,7 +35,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
-# ── Optional: lock files (uncomment if team uses one package manager) ──
-# package-lock.json
-# yarn.lock
