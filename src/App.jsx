@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Partner from "./pages/Partner";
 
 function App() {
   const location = useLocation();
@@ -20,6 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/partner" element={<Partner />} />
         </Routes>
       </main>
       <Footer />

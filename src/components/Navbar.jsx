@@ -7,8 +7,8 @@ import logo from "../assets/logoSmallLight.jpeg";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "About Us", path: "#", comingSoon: true },
-  { name: "Partner", path: "#", comingSoon: true },
+  { name: "About Us", path: "/about" },
+  { name: "Partner", path: "/partner" },
   { name: "Contact Us", path: "/contact" },
   { name: "Utilities", path: "#", comingSoon: true },
   { name: "Profile", path: "#", comingSoon: true },

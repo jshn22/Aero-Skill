@@ -35,3 +35,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# ── Project Reference Files (local only) ──────────────────────
+# Legacy AeroSkill source folder and V4 HTML — for local reference only
+AeroSkill/
+aeroskill_full_site_v4.html
