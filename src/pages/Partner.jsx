@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { School, UserPlus, Building2, Users, ArrowRight } from "lucide-react";
+import { School, UserPlus, Building2, Users } from "lucide-react";
 
 const partners = [
   {
@@ -158,17 +158,9 @@ const Partner = () => {
                   <h4 className="text-xl font-bold text-[#171710] dark:text-white mb-3">
                     {partner.title}
                   </h4>
-                  <p className="text-slate-500 dark:text-slate-400 leading-relaxed text-sm mb-4">
+                  <p className="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">
                     {partner.description}
                   </p>
-                  {/* Arrow indicator */}
-                  <motion.div
-                    className={`inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${partner.color}`}
-                    initial={{ x: -6 }}
-                    whileHover={{ x: 0 }}
-                  >
-                    Learn more <ArrowRight size={12} />
-                  </motion.div>
                 </div>
               </motion.div>
             );
